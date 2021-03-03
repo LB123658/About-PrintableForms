@@ -5,6 +5,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 <title>Printable Forms</title>
+<link rel='icon' href='https://drive.google.com/thumbnail?id=1CZRjtT4NmjhcsZYm5vf1O3tCv37fPtir' type='image/png'/ >
+
 <style>
 body {
 background: #282828;
@@ -33,6 +35,44 @@ font-family: 'Nunito', sans-serif;
 font-size: 50px;
 font-weight: bold;
 }
+.product {
+font-family: 'Nunito', sans-serif;
+font-size: 25px;
+font-weight: bold;
+cursor: pointer;
+height: 100px;
+border-radius: 7px;
+border: none;
+background: white;
+width: 150px;
+}
+#editor {
+position: fixed;
+top: 0px;
+left: 500px;
+}
+#illustrator {
+position: fixed;
+top: 0px;
+left: 650px;
+}
+#sites {
+position: fixed;
+top: 0px;
+left: 800px;
+}
+#underlineE {
+position: fixed;
+top: 90px;
+left: 500px;
+border: none;
+border-radius: 5px 5px 0px 0px;
+width: 150px;
+background: #f5d000;
+height: 10px;
+z-index: 1;
+visibility: hidden;
+}
 </style>
 </head>
 <body>
@@ -40,12 +80,26 @@ font-weight: bold;
 <div id="nav">
 <img id="icon" src="https://drive.google.com/thumbnail?id=1CZRjtT4NmjhcsZYm5vf1O3tCv37fPtir" onclick="reload()">
 <p id="name">PrintableForms</p>
+<button class="product" id="editor" onmousedown="animationEditor()" onmouseup="blankEditor()" onclick="activeEditor()">Editor Pro</button>
+<button class="product" id="illustrator" onclick="">Illustrator</button>
+<button class="product" id="sites" onclick="">Sites</button>
+
+<button id="underlineE"></button>
 </div>
 
 
 <script>
 function reload() {
 location.reload();
+}
+function animationEditor() {
+document.getElementById("editor").style.background = "lightgrey";
+}
+function blankEditor() {
+document.getElementById("editor").style.background = "white";
+}
+function activeEditor() {
+document.getElementById("underlineE").style.visibility = "visible";
 }
 </script>
 </body>

@@ -165,6 +165,11 @@ top: 20px;
 left: 55%;
 width: 40%;
 }
+#footer {
+height: 100px;
+background: transparent;
+width: 100%;
+}
 </style>
 </head>
 <body>
@@ -193,8 +198,11 @@ width: 40%;
 </div>
 
 <div id="infoDiv">
-<p class="message" id="moreInfo"><a id="info">PrintableForms is a collection of online resources for writing documents, digital drawing, website building, and texting. You can access all resources from the PrintableForms Resource Center located at the "More" button at the top right corner.</a>
+<p class="message" id="moreInfo"><a id="info">PrintableForms is a collection of online resources for writing documents, digital drawing, website building, and texting. You can access all resources from the PrintableForms Resource Center located at the "More" button at the top right corner. Also you never have to make a personal accoint or sign in.</a>
 <img src="https://drive.google.com/uc?id=1bC9XaSymxUBJbRIV_4-Lm-E7GXsxO2Dk&export=download" id="adPhoto">
+</div>
+
+<div id="footer">
 </div>
 
 <script>
@@ -209,6 +217,7 @@ document.getElementById("homeMessage").innerHTML = "The utlimate free writing si
 document.getElementById("moreLink").href = "https://lb123658.github.io/PrintableForms-Editor/";
 document.getElementById("title").innerHTML = "About PF Editor Pro";
 document.getElementById("favicon").src = "https://drive.google.com/thumbnail?id=1GkuLONytoggfFy2AkGK_pZz6SqAZCTOI";
+document.getElementById("moreInfo").innerHTML = "PF Editor Pro is a free writing website from PrintableForms that lets you change fonts, colors, and size. Save and download your files as .txt or .html files that can easily be embedded in websites or shared.";
 }
 function activeIll() {
 document.getElementById("underlineI").style.visibility = "visible";
@@ -218,6 +227,7 @@ document.getElementById("homeMessage").innerHTML = "The future of digital drawin
 document.getElementById("title").innerHTML = "About PF Illustrator";
 document.getElementById("moreLink").href = "https://lb123658.github.io/PF-Illustrator/";
 document.getElementById("favicon").src = "https://drive.google.com/thumbnail?id=1d47Lg2inPsOFn0gdbb0FjC0H38uEbBmr";
+document.getElementById("moreInfo").innerHTML = "PF Illustrator is a free digital drawing program that allows you to draw on top of photos and add text captions as well.";
 }
 function activeSites() {
 document.getElementById("underlineS").style.visibility = "visible";
@@ -227,6 +237,7 @@ document.getElementById("homeMessage").innerHTML = "Create a website without usi
 document.getElementById("title").innerHTML = "About PF Sites";
 document.getElementById("moreLink").href = "#";
 document.getElementById("favicon").src = "https://drive.google.com/thumbnail?id=1zOzo2yfvSthTFtu5__L8iXQwVmEqDXED";
+document.getElementById("moreInfo").innerHTML = "PF Sites will let you create your own web page without having to code ad all. It will include custom colors, buttons, and text. Coming soon.";
 }
 </script>
 </body>

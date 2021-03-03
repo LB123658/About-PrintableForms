@@ -76,6 +76,30 @@ height: 10px;
 z-index: 1;
 visibility: hidden;
 }
+#underlineI {
+position: fixed;
+top: 90px;
+left: 650px;
+border: none;
+border-radius: 5px 5px 0px 0px;
+width: 150px;
+background: #56B52C;
+height: 10px;
+z-index: 1;
+visibility: hidden;
+}
+#underlineS {
+position: fixed;
+top: 90px;
+left: 800px;
+border: none;
+border-radius: 5px 5px 0px 0px;
+width: 150px;
+background: #B7B7B7;
+height: 10px;
+z-index: 1;
+visibility: hidden;
+}
 </style>
 </head>
 <body>
@@ -83,11 +107,14 @@ visibility: hidden;
 <div id="nav">
 <img id="icon" src="https://drive.google.com/thumbnail?id=1CZRjtT4NmjhcsZYm5vf1O3tCv37fPtir" onclick="reload()">
 <p id="name">PrintableForms</p>
-<button class="product" id="editor" onmousedown="animationEditor()" onmouseup="blankEditor()" onclick="activeEditor()">Editor Pro</button>
-<button class="product" id="illustrator" onclick="">Illustrator</button>
-<button class="product" id="sites" onclick="">Sites</button>
+<button class="product" id="editor" onclick="activeEditor()">Editor Pro</button>
+<button class="product" id="illustrator" onclick="activeIll()">Illustrator</button>
+<button class="product" id="sites" onclick="activeSites()">Sites</button>
 
 <button id="underlineE"></button>
+<button id="underlineI"></button>
+<button id="underlineS"></button>
+
 </div>
 
 
@@ -95,14 +122,20 @@ visibility: hidden;
 function reload() {
 location.reload();
 }
-function animationEditor() {
-document.getElementById("editor").style.background = "lightgrey";
-}
-function blankEditor() {
-document.getElementById("editor").style.background = "white";
-}
 function activeEditor() {
 document.getElementById("underlineE").style.visibility = "visible";
+document.getElementById("underlineI").style.visibility = "hidden";
+document.getElementById("underlineS").style.visibility = "hidden";
+}
+function activeIll() {
+document.getElementById("underlineI").style.visibility = "visible";
+document.getElementById("underlineE").style.visibility = "hidden";
+document.getElementById("underlineS").style.visibility = "hidden";
+}
+function activeSites() {
+document.getElementById("underlineS").style.visibility = "visible";
+document.getElementById("underlineI").style.visibility = "hidden";
+document.getElementById("underlineE").style.visibility = "hidden";
 }
 </script>
 </body>

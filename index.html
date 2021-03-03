@@ -145,6 +145,14 @@ right: 0px;
 width: 80%;
 z-index: -1;
 }
+#moreInfo {
+position: absolute;
+top: 1000px;
+left: 0px;
+width: 100%;
+text-align: left;
+font-size: 30px;
+}
 </style>
 </head>
 <body>
@@ -165,11 +173,16 @@ z-index: -1;
 <br><br><br><br><br><br><br><br><br>
 <div id="homePage">
 <p class="message" id="homeMessage">Bring creativity online.</p><br>
-<button class="option" id="homeA">Get started</button>
-<button class="option" id="homeB">Learn more</button>
+<a href="https://sites.google.com/view/printableforms-recource-center" target="_blank" id="moreLink">
+<button class="option" id="homeA">Get started</button></a>
+<a href="https://lb123658.github.io/printableforms.about/#moreInfo">
+<button class="option" id="homeB">Learn more</button></a>
 <img src="https://drive.google.com/uc?id=1atwnENVl-dU6_dNslNSCtiBttUn-vERa&export=download" id="designPng">
 </div>
 
+<div id="info">
+<p class="message" id="moreInfo"><a id="info">PrintableForms is a collection of online resources for writing documents, digital drawing, website building, and texting. You can access all resources from the PrintableForms Resource Center located at the "More" button at the top right corner.</a>
+</div>
 
 <script>
 function reload() {
@@ -179,16 +192,20 @@ function activeEditor() {
 document.getElementById("underlineE").style.visibility = "visible";
 document.getElementById("underlineI").style.visibility = "hidden";
 document.getElementById("underlineS").style.visibility = "hidden";
+document.getElementById("homeMessage").innerHTML = "The utlimate free writing site.";
+document.getElementById("moreLink").href = "https://lb123658.github.io/PrintableForms-Editor/";
 }
 function activeIll() {
 document.getElementById("underlineI").style.visibility = "visible";
 document.getElementById("underlineE").style.visibility = "hidden";
 document.getElementById("underlineS").style.visibility = "hidden";
+document.getElementById("homeMessage").innerHTML = "The future of digital drawing.";
 }
 function activeSites() {
 document.getElementById("underlineS").style.visibility = "visible";
 document.getElementById("underlineI").style.visibility = "hidden";
 document.getElementById("underlineE").style.visibility = "hidden";
+document.getElementById("homeMessage").innerHTML = "Create a website without using any code.";
 }
 </script>
 </body>
